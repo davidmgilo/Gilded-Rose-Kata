@@ -1,6 +1,6 @@
 <?php
 
-namespace spec;
+namespace spec\App;
 
 
 use App\GildedRose;
@@ -11,6 +11,7 @@ class GildedRoseSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
+        $this->beConstructedWith('normal',10,5);
         $this->shouldHaveType(GildedRose::class);
     }
 }

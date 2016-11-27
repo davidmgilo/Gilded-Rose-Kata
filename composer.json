@@ -11,5 +11,10 @@
             "name": "David Martinez Gilo",
             "email": "davidmgilo@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\":"src"
+        }
+    }
 }
