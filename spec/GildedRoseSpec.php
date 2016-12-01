@@ -50,7 +50,7 @@ class GildedRoseSpec extends ObjectBehavior
     function it_updates_normal_items_before_sell_date()
     {
         $this->beConstructedThrough('of',['normal',10,5]);
-        $this->tick();;
+        $this->tick();
         $this->quality->shouldBe(9);
         $this->sellIn->shouldBe(4);
     }
@@ -134,30 +134,30 @@ class GildedRoseSpec extends ObjectBehavior
         $this->quality->shouldBe(50);
         $this->sellIn->shouldBe(-11);
     }
-//
-//    function it_updates_Sulfuras_items_before_the_sell_date()
-//    {
-//        $this->beConstructedWith('Sulfuras, Hand of Ragnaros',80,5);
-//        $this->tick();
-//        $this->quality->shouldBe(80);
-//        $this->sellIn->shouldBe(5);
-//    }
-//
-//    function it_updates_Sulfuras_items_on_the_sell_date()
-//    {
-//        $this->beConstructedWith('Sulfuras, Hand of Ragnaros',80,0);
-//        $this->tick();
-//        $this->quality->shouldBe(80);
-//        $this->sellIn->shouldBe(0);
-//    }
-//
-//    function it_updates_Sulfuras_items_after_the_sell_date()
-//    {
-//        $this->beConstructedWith('Sulfuras, Hand of Ragnaros',80,-1);
-//        $this->tick();
-//        $this->quality->shouldBe(80);
-//        $this->sellIn->shouldBe(-1);
-//    }
+
+    function it_updates_Sulfuras_items_before_the_sell_date()
+    {
+        $this->beConstructedThrough('of',['Sulfuras, Hand of Ragnaros',80,5]);
+        $this->tick();
+        $this->quality->shouldBe(80);
+        $this->sellIn->shouldBe(5);
+    }
+
+    function it_updates_Sulfuras_items_on_the_sell_date()
+    {
+        $this->beConstructedThrough('of',['Sulfuras, Hand of Ragnaros',80,0]);
+        $this->tick();
+        $this->quality->shouldBe(80);
+        $this->sellIn->shouldBe(0);
+    }
+
+    function it_updates_Sulfuras_items_after_the_sell_date()
+    {
+        $this->beConstructedThrough('of',['Sulfuras, Hand of Ragnaros',80,-1]);
+        $this->tick();
+        $this->quality->shouldBe(80);
+        $this->sellIn->shouldBe(-1);
+    }
 //
 //    function it_updates_Backstage_pass_items_long_before_the_sell_date()
 //    {
